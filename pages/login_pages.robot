@@ -12,9 +12,9 @@ ${BUTTON}     //button[@class="oxd-button oxd-button--medium oxd-button--main or
 
 
 *** Keywords ***
-Open website
-    Open Browser        ${URL}    chrome
-    Wait Until Page Contains Element    ${USER_NAME}    20s
+#Open website
+#    Open Browser        ${URL}    chrome
+#    Wait Until Page Contains Element    ${USER_NAME}    20s
 
 Input Username
     [Arguments]    ${user}

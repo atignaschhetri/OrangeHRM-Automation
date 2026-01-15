@@ -1,0 +1,64 @@
+{
+  "valid_login": {
+    "username": "Admin",
+    "password": "admin123",
+    "expected_result": "Dashboard page is displayed"
+  },
+  "relogin_after_logout": {
+    "username": "Admin",
+    "password": "admin123",
+    "expected_result": "User should be able to login again"
+  },
+  "invalid_logins": [
+    {
+      "username": "abcd",
+      "password": "abc123",
+      "expected_message": "Invalid credentials"
+    },
+    {
+      "username": "Admin",
+      "password": "ad123434",
+      "expected_message": "Invalid credentials"
+    },
+    {
+      "username": "admin",
+      "password": "admin123",
+      "expected_message": "Invalid credentials"
+    }
+  ],
+
+  "forgot_password": {
+    "valid_user": {
+      "username": "Admin",
+      "expected_message": "A reset password link has been sent to you via email"
+    },
+    "invalid_user": {
+      "username": "unknownuser",
+      "expected_message": "User does not exist"
+    }
+  },
+  "empty_credentials": {
+    "username": "",
+    "password": "",
+    "expected_message": "Username and password are required"
+  },
+
+  "add_employee": {
+    "employee_1": {
+      "first_name": "John",
+      "last_name": "Walker",
+      "employee_id": "0377"
+    },
+    "employee_2": {
+      "first_name": "Sarah",
+      "last_name": "George",
+      "employee_id": "0455"
+
+    },
+    "employee_3": {
+      "first_name": "Rohan",
+      "last_name": "Mehta",
+      "employee_id": "0512"
+    }
+  }
+}

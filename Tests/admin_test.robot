@@ -2,6 +2,9 @@
 Library    SeleniumLibrary
 Resource    ../pages/login_pages.robot
 Resource    ../pages/admin.robot
+Resource    ../Resources/global_keyword.robot
+
+Test Teardown    Capture Screenshot And Close Browser
 
 
 *** Test Cases ***
@@ -20,4 +23,3 @@ Add Employees
     Employee_ID    1212
     Click Save Button
 
-    
