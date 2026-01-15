@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-01-15T20:27:59.985238" rpa="false" schemaversion="5">
+<suite id="s1" name="Admin Test" source="C:\Users\Hp\PycharmProjects\OrangeHrm\Tests\admin_test.robot">
+<test id="s1-t1" name="Add Employees" line="8">
+<kw name="Open website" owner="login_pages">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:00.341114" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-15T20:28:00.340689" elapsed="7.441163"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${USER_NAME}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-15T20:28:07.782316" elapsed="1.013707"/>
+</kw>
+<status status="PASS" start="2026-01-15T20:28:00.339262" elapsed="8.457485"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-15T20:28:08.797590" elapsed="0.052165"/>
+</kw>
+<kw name="Input Username" owner="login_pages">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USER_NAME}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T20:28:08.851345" elapsed="0.035354"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:08.887911" level="INFO">Typing text 'Admin' into text field '//input[@name="username"]'.</msg>
+<arg>${USER_NAME}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:08.887154" elapsed="0.149218"/>
+</kw>
+<arg>Admin</arg>
+<status status="PASS" start="2026-01-15T20:28:08.850545" elapsed="0.186112"/>
+</kw>
+<kw name="Input password" owner="login_pages">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T20:28:09.038670" elapsed="0.037689"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:09.077346" level="INFO">Typing text 'admin123' into text field '//input[@name="password"]'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:09.076836" elapsed="0.140219"/>
+</kw>
+<arg>admin123</arg>
+<status status="PASS" start="2026-01-15T20:28:09.037757" elapsed="0.179506"/>
+</kw>
+<kw name="Click login Button" owner="login_pages">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-01-15T20:28:09.218294" elapsed="0.038057"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:09.257015" level="INFO">Clicking button '//button[@class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button"]'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:09.256649" elapsed="0.142053"/>
+</kw>
+<status status="PASS" start="2026-01-15T20:28:09.217863" elapsed="0.181080"/>
+</kw>
+<kw name="Click PIM" owner="admin">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PIM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T20:28:09.399985" elapsed="2.702766"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:12.103457" level="INFO">Clicking element '//span[normalize-space()='PIM']/ancestor::a'.</msg>
+<arg>${PIM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:12.103064" elapsed="1.735882"/>
+</kw>
+<status status="PASS" start="2026-01-15T20:28:09.399504" elapsed="4.439654"/>
+</kw>
+<kw name="Add Employee" owner="admin">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_EMPLOYEE}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T20:28:13.840322" elapsed="0.733848"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:14.575355" level="INFO">Clicking element 'xpath=//a[normalize-space()='Add Employee']'.</msg>
+<arg>${ADD_EMPLOYEE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:14.574595" elapsed="1.066930"/>
+</kw>
+<status status="PASS" start="2026-01-15T20:28:13.839795" elapsed="1.801873"/>
+</kw>
+<kw name="Add firstname" owner="admin">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIRST_NAME}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T20:28:15.642505" elapsed="0.873151"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:16.516685" level="INFO">Typing text 'Ram' into text field '//input[contains(@class,'orangehrm-firstname')]'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>${firstname1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:16.516131" elapsed="0.115118"/>
+</kw>
+<arg>Ram</arg>
+<status status="PASS" start="2026-01-15T20:28:15.642129" elapsed="0.989445"/>
+</kw>
+<kw name="Add lastname" owner="admin">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LAST_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T20:28:16.634749" elapsed="0.038069"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:16.673749" level="INFO">Typing text 'Thapa' into text field '//input[contains(@class,'orangehrm-lastname')]'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>${lastname1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:16.673145" elapsed="0.106167"/>
+</kw>
+<arg>Thapa</arg>
+<status status="PASS" start="2026-01-15T20:28:16.632580" elapsed="0.146943"/>
+</kw>
+<kw name="Employee_ID" owner="admin">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMPLOYEE_ID}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T20:28:16.780766" elapsed="0.023600"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:16.804904" level="INFO">Typing text '1212' into text field '//label[normalize-space()='Employee Id']/ancestor::div[contains(@class,'oxd-input-group')]//input'.</msg>
+<arg>${EMPLOYEE_ID}</arg>
+<arg>${emp_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:16.804582" elapsed="0.118936"/>
+</kw>
+<arg>1212</arg>
+<status status="PASS" start="2026-01-15T20:28:16.780227" elapsed="0.143496"/>
+</kw>
+<kw name="Click Save Button" owner="admin">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-15T20:28:16.925729" level="INFO">Clicking button '//button[@class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space"]'.</msg>
+<arg>${SAVE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T20:28:16.925178" elapsed="1.053937"/>
+</kw>
+<status status="PASS" start="2026-01-15T20:28:16.924431" elapsed="1.054960"/>
+</kw>
+<status status="PASS" start="2026-01-15T20:28:00.337929" elapsed="17.641932"/>
+</test>
+<status status="PASS" start="2026-01-15T20:27:59.988156" elapsed="17.992661"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Admin Test" id="s1" pass="1" fail="0" skip="0">Admin Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
